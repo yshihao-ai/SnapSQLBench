@@ -16,7 +16,7 @@ In today's data-driven world, a significant portion of structured tabular data i
 
 ## 🗂️ Benchmark Construction
 
-  ![Framework](./assets/paradigm.png)
+  ![Framework](./assets/benchmark.png)
 
 Snap2SQL-Bench comprises two complementary components, yielding a total of 860 complex queries across 1,369 images:
 
@@ -88,7 +88,7 @@ git clone [https://github.com/yshihao-ai/SnapSQLBench.git](https://github.com/ys
 cd snap2sql
 
 # Create environment
-conda create -n snap2sql python=3.10
+conda create -n snap2sql python=3.12
 conda activate snap2sql
 pip install -r requirements.txt
 ```
