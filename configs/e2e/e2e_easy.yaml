@@ -1,0 +1,49 @@
+# =========================================================
+# BaseConfig
+# =========================================================
+data_dir: "./dataset/SnapBench-simple-clean/dev"
+level: "easy"
+results_dir: "./results"
+
+sql_execution_timeout: 15
+e2e_concurrency: 4
+skip_visual_api_call: False
+
+# =========================================================
+# OSS
+# =========================================================
+use_oss: true
+oss_access_key_id: ""
+oss_access_key_secret: ""
+oss_endpoint: ""
+oss_bucket_name: ""
+oss_dir_prefix: ""
+
+# =========================================================
+# PipelineConfig - Visual
+# =========================================================
+e2e_model_name: "qwen3-vl-plus"
+# e2e_model_name: "internvl3-38b"
+# e2e_model_name: "gpt-5.2"
+# e2e_model_name: "gemini-2.5-flash"
+
+
+e2e_api_endpoint: ""
+e2e_api_key: ""
+
+
+max_width: 2048
+max_height: 4096
+overlap: 200
+
+# =========================================================
+# Generation Parameters
+# =========================================================
+temperature: 0.0
+top_p: 0.1
+frequency_penalty: 0.0
+presence_penalty: 0.0 
+max_tokens: 16384
+
+seed: 42
+
