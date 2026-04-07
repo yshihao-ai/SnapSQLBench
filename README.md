@@ -1,10 +1,13 @@
 
-# Snap2SQL-Bench: A Benchmark for Visual Text-to-SQL
+# SnapSQL-Bench: A Benchmark for Visual Text-to-SQL
 
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Python 3.12](https://img.shields.io/badge/Python-3.12-green.svg)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
+[![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
+[![Hugging Face Dataset](https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-FFD21E.svg)](https://huggingface.co/datasets/yshihao/SnapSQLBench)
 
-This is the official repository for **Snap2SQL-Bench**, a comprehensive benchmark designed to evaluate visual Text-to-SQL systems. 
+This is the official repository for **SnapSQL-Bench**, a comprehensive benchmark designed to evaluate visual Text-to-SQL systems. 
+
+The full dataset is publicly available and hosted on  [Hugging Face](https://huggingface.co/datasets/yshihao/SnapSQLBench)🤗.
 
 ## 📖 Abstract & Introduction
 
@@ -12,13 +15,13 @@ This is the official repository for **Snap2SQL-Bench**, a comprehensive benchmar
 
 In today's data-driven world, a significant portion of structured tabular data is trapped in non-interactive visual formats like screenshots, PDFs, and photographs. This **"vision isolation"** renders the data inaccessible for automated analysis and ad-hoc querying. While existing visual table reasoning benchmarks (like TableQA) attempt to solve this, they lack the deterministic rigor of Text-to-SQL and often fail to account for the visual noise ubiquitous in real-world scenarios.
 
-**Snap2SQL-Bench** bridges these gaps by systematically evaluating both **robustness to realistic table-image corruption** and the **ability to reason over task-relevant visual cues**. We establish three visual Text-to-SQL paradigms and propose **VisualCueSQL**, a novel method that translates visual cues into explicit logical evidence for SQL synthesis, significantly improving executable SQL generation.
+**SnapSQL-Bench** bridges these gaps by systematically evaluating both **robustness to realistic table-image corruption** and the **ability to reason over task-relevant visual cues**. We establish three visual Text-to-SQL paradigms and propose **VisualCueSQL**, a novel method that translates visual cues into explicit logical evidence for SQL synthesis, significantly improving executable SQL generation.
 
 ## 🗂️ Benchmark Construction
 
   ![Framework](./assets/benchmark.png)
 
-Snap2SQL-Bench comprises two complementary components, yielding a total of 860 complex queries across 1,369 images:
+SnapSQL-Bench comprises two complementary components, yielding a total of 860 complex queries across 1,369 images:
 
 1. **Transformed Set ($\mathcal{X}_\alpha$):** Adapted from expert-curated Text-to-SQL benchmarks (e.g., BIRD). We introduce real-world visual noise (downsampling, blurring, physical print-and-photograph artifacts, shadows) while faithfully preserving the original complex SQL reasoning patterns and simulating constrained viewports.
 
@@ -40,7 +43,7 @@ Our codebase supports three distinct visual Text-to-SQL paradigms:
 
 ## 📊 Experimental Results
 
-Extensive experiments on Snap2SQL-Bench reveal that current VLMs struggle with vision isolation, while our **VisualCueSQL** consistently yields sizable improvements.
+Extensive experiments on SnapSQL-Bench reveal that current VLMs struggle with vision isolation, while our **VisualCueSQL** consistently yields sizable improvements.
 
 ### Main Results (Schema, Content, and Execution Accuracy)
 *Note: Ovr = Overall, E = Easy, M = Medium, H = Hard.*
@@ -70,7 +73,7 @@ Extensive experiments on Snap2SQL-Bench reveal that current VLMs struggle with v
 ## 📁 Repository Structure
 
 ```
-snap2sql/
+SnapSQL/
 ├── main_end2end.py        # Entry point for the End-to-End paradigm
 ├── main_pipeline.py       # Entry point for the Pipeline paradigm
 ├── main_visualcue.py      # Entry point for the VisualCueSQL paradigm
@@ -85,11 +88,11 @@ snap2sql/
 
 ```bash
 git clone [https://github.com/yshihao-ai/SnapSQLBench.git](https://github.com/yshihao-ai/SnapSQLBench.git)
-cd snap2sql
+cd SnapSQL
 
 # Create environment
-conda create -n snap2sql python=3.12
-conda activate snap2sql
+conda create -n SnapSQL python=3.12
+conda activate SnapSQL
 pip install -r requirements.txt
 ```
 
