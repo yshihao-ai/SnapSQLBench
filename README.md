@@ -9,6 +9,8 @@ This is the official repository for **SnapSQL-Bench**, a comprehensive benchmark
 
 The full dataset is publicly available and hosted on  [Hugging Face](https://huggingface.co/datasets/yshihao/SnapSQLBench)🤗.
 
+> 📌 **Paper Appendix:** For an in-depth look at dataset construction details and comprehensive visual examples, please refer to the [**Appendix.pdf**](./Snap2SQL-Appendix.pdf) included in this repository.
+
 ## 📖 Abstract & Introduction
 
 <img src="./assets/example.png" width="45%" align="right" />
